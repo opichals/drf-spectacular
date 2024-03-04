@@ -704,7 +704,7 @@ class AutoSchema(ViewInspector):
 
             return append_meta(self._map_response_type_hint(method), meta)
 
-        if isinstance(field, (serializers.BooleanField, serializers.NullBooleanField)):
+        if isinstance(field, (serializers.BooleanField)):
             return append_meta(build_basic_type(OpenApiTypes.BOOL), meta)
 
         if isinstance(field, serializers.JSONField):
